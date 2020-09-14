@@ -48,7 +48,7 @@ function _getAllPossibleSpecificFilterSet(filterSet) {
                     'isPoorlyVentilated', [true, false]),
                 'bareFaces', [true, false]),
             'prolongedTime', [true, false]),
-        'speech', [true, false]);
+        'speech', [0, 1, 2]);
 }
 
 /**

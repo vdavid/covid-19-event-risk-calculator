@@ -75,7 +75,7 @@ function _calculateEnabledForRow(filterSet, {bareFaces, prolongedTime, speech}) 
         return [
             !filterSet.isCrowded && !filterSet.isInside,
             !filterSet.isCrowded && (filterSet.isInside === undefined || filterSet.isInside) && !filterSet.isPoorlyVentilated,
-            !filterSet.isCrowded && (filterSet.isPoorlyVentilated === undefined || filterSet.isPoorlyVentilated),
+            !filterSet.isCrowded && (filterSet.isInside === undefined || filterSet.isInside) && (filterSet.isPoorlyVentilated === undefined || filterSet.isPoorlyVentilated),
             (filterSet.isCrowded === undefined || filterSet.isCrowded) && !filterSet.isInside,
             (filterSet.isCrowded === undefined || filterSet.isCrowded) && (filterSet.isInside === undefined || filterSet.isInside) && !filterSet.isPoorlyVentilated,
             (filterSet.isCrowded === undefined || filterSet.isCrowded) && (filterSet.isInside === undefined || filterSet.isInside) && (filterSet.isPoorlyVentilated === undefined || filterSet.isPoorlyVentilated),

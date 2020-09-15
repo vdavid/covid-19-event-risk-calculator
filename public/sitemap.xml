@@ -3,4 +3,12 @@
         <loc>https://covidevent.info/</loc>
         <lastmod>2020-09-15T12:34:00.000Z</lastmod>
     </url>
+    <url>
+        <loc>https://covidevent.info/en/</loc>
+        <lastmod>2020-09-15T12:34:00.000Z</lastmod>
+    </url>
+    <url>
+        <loc>https://covidevent.info/hu/</loc>
+        <lastmod>2020-09-15T12:34:00.000Z</lastmod>
+    </url>
 </urlset>

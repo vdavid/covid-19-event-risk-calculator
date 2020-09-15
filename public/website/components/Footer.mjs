@@ -6,7 +6,7 @@ export default function Footer() {
 
     return React.createElement('footer', {}, [
         __('This is an open-source project'),
-        ' (', React.createElement('a', {href: 'https://github.com/vdavid/covid-19-event-risk-calculator'}, 'GitHub'), ') © 2020 ',
+        ' (', React.createElement('a', {href: 'https://github.com/vdavid/covid-19-event-risk-calculator', target: '_blank'}, 'GitHub'), ') © 2020 ',
         React.createElement('a', {href: 'https://david.veszelovszki.hu', target: '_blank'}, __('David Veszelovszki')),
         ' – ', __('inspired by'), ' ',
         React.createElement('a', {href: 'https://www.bmj.com/content/370/bmj.m3223', target: '_blank'}, __('bmj’s article')),

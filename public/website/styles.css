@@ -6,7 +6,7 @@
     --table-yellow-color: #ffeb3b;
     --table-red-color: #f44336;
 }
-body { font-family: sans-serif; }
+body { font-family: sans-serif; line-height:1.5rem; }
 #app { position: relative; margin: 0 auto; padding: 1rem; max-width: 1024px; }
 @media (min-width: 1024px) {
     #app {display: grid; grid-template-areas:

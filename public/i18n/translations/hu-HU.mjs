@@ -30,7 +30,7 @@ export const translations = {
     'Not sure yet. Give a few more answers.': {translation: 'Ennyiből még nem tudjuk. Válaszolj még néhány kérdésre.'},
     'You are at manageable risk. Take care though.': {translation: 'Csak alacsony kockázatot vállalsz. De azért vigyázz magadra, és vedd észre, ha változik a helyzet.'},
     'You are at medium risk. Keep your distance at all times from people outside your household.': {translation: 'Közepes kockázatot vállalsz. Mindig tarts távolságot a veled nem egy háztartásban élőktől.'},
-    'You are at high risk. Avoid/get out of this situation to take care of yourself and others.': {translation: 'Magas kockázatot vállalsz. Kerüld el ezt a helyzetet, vagy lépj ki a belőle gyorsan. Így tudsz legjobban vigyázz magadra és másokra.'},
+    'You are at high risk. Avoid/get out of this situation to take care of yourself and others.': {translation: 'Magas kockázatot vállalsz. Kerüld el ezt a helyzetet, vagy lépj ki belőle gyorsan. Így tudsz legjobban vigyázz magadra és másokra.'},
 
     /* Table */
     'Type and level of group activity': {translation: 'Csoportos tevékenység típusa és szintje'},

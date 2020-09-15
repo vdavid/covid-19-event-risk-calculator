@@ -23,7 +23,7 @@ body { font-family: sans-serif; }
     footer { grid-area: footer; }
 }
 
-.header { padding-bottom:1rem; }
+.header { padding-bottom: 1rem; }
 .languageSwitcher {position: absolute; right: 0; top: -0.5rem; }
 .languageSwitcher .flag { width: 1.5rem; height: 1.5rem; margin-left: 0.5rem; vertical-align: middle; }
 h1 {margin-top: 1rem; }
@@ -42,7 +42,7 @@ h1 {margin-top: 1rem; }
 
 .result { padding: 1rem 0; }
 .result .question { padding: 1rem 0; }
-.result .answer { background-color: var(--table-header-color); padding: 1rem; }
+.result .answer { background-color: var(--table-header-color); padding: 1rem; transition: background 0.3s; }
 .result .answer.low { background-color: var(--table-green-color); }
 .result .answer.medium { background-color: var(--table-yellow-color); }
 .result .answer.high { background-color: var(--table-red-color); }

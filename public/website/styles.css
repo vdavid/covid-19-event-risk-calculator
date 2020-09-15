@@ -21,7 +21,7 @@ body { position:relative; margin: 0 auto; padding: 0 1rem 1rem; max-width: 1024p
     footer { grid-area: footer; }
 }
 
-.languageSwitcher {position:absolute; right:0; }
+.languageSwitcher {position:absolute; right:0; top:-0.5rem; }
 .languageSwitcher .flag { width:1.5rem; height: 1.5rem; margin-left:0.5rem; vertical-align:middle; }
 
 .decisionPoints { padding: 1rem 0; display: flex; flex-wrap: wrap;}

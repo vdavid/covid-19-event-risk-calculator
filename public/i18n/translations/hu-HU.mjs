@@ -53,5 +53,6 @@ export const translations = {
     'David Veszelovszki': {translation: 'Veszelovszki Dávid'},
     'inspired by': {translation: 'a'},
     'bmj’s article': {translation: 'bmj cikke'},
-    '. If you like it:': {translation: ' alapján. Ha tetszik, itt adakozhatsz:'},
+    '. If you like it, ': {translation: ' alapján. Ha tetszik, itt adakozhatsz: '},
+    'This is an open-source project': {translation: 'Ez egy nyílt forráskódú projekt'},
 };

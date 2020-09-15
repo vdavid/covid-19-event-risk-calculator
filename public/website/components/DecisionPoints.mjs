@@ -1,16 +1,19 @@
 import React from '../../web_modules/react.js';
+import { useI18n } from '../../i18n/components/I18nProvider.mjs';
 
 /**
  * @private
  */
 export default function DecisionPoints(filterSet, setFilterSet) {
+    const {__} = useI18n();
+
     const decisionPoints = [
-        {question: 'Is the place crowded?', filterName: 'isCrowded', options: [{title: 'low occupancy', value: false}, {title: 'high occupancy', value: true}]},
-        {question: 'Is it outside or inside?', filterName: 'isInside', options: [{title: 'outside', value: false}, {title: 'inside', value: true}]},
-        {question: 'Is it well ventilated?', filterName: 'isPoorlyVentilated', options: [{title: 'well ventilated', value: false}, {title: 'poorly ventilated', value: true}]},
-        {question: 'Do all others near you wear masks?', filterName: 'bareFaces', options: [{title: 'yes', value: false}, {title: 'no', value: true}]},
-        {question: 'Are you there for a long time?', filterName: 'prolongedTime', options: [{title: 'short time', value: false}, {title: 'prolonged time', value: true}]},
-        {question: 'Are people near you speaking?', filterName: 'speech', options: [{title: 'silent', value: 0}, {title: 'speaking', value: 1}, {title: 'shouting/singing', value: 2}]},
+        {question: __('Is the place crowded?'), filterName: 'isCrowded', options: [{title: __('low occupancy'), value: false}, {title: __('high occupancy'), value: true}]},
+        {question: __('Is it outside or inside?'), filterName: 'isInside', options: [{title: __('outside'), value: false}, {title: __('inside'), value: true}]},
+        {question: __('Is it well ventilated?'), filterName: 'isPoorlyVentilated', options: [{title: __('well ventilated'), value: false}, {title: __('poorly ventilated'), value: true}]},
+        {question: __('Do all others near you wear masks?'), filterName: 'bareFaces', options: [{title: __('yes'), value: false}, {title: __('no'), value: true}]},
+        {question: __('Are you there for a long time?'), filterName: 'prolongedTime', options: [{title: __('short time'), value: false}, {title: __('prolonged time'), value: true}]},
+        {question: __('Are people near you speaking?'), filterName: 'speech', options: [{title: __('silent'), value: 0}, {title: __('speaking'), value: 1}, {title: __('shouting/singing'), value: 2}]},
     ];
 
     return React.createElement('div', {className: 'decisionPoints'},

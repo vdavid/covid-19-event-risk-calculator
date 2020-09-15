@@ -6,7 +6,7 @@
     --table-yellow-color: #ffeb3b;
     --table-red-color: #f44336;
 }
-body { margin: 0 auto; padding: 0 1rem 1rem; max-width: 1024px; font-family: sans-serif; }
+body { position:relative; margin: 0 auto; padding: 0 1rem 1rem; max-width: 1024px; font-family: sans-serif; }
 @media (min-width: 1024px) {
     #app {display: grid; grid-template-areas:   "header header"
                         "decisionPoints table"
@@ -21,6 +21,8 @@ body { margin: 0 auto; padding: 0 1rem 1rem; max-width: 1024px; font-family: san
     footer { grid-area: footer; }
 }
 
+.languageSwitcher {position:absolute; right:0; }
+.languageSwitcher .flag { width:1.5rem; height: 1.5rem; margin-left:0.5rem; vertical-align:middle; }
 
 .decisionPoints { padding: 1rem 0; display: flex; flex-wrap: wrap;}
 .decisionPoint { padding-bottom: 1rem; width:100%; }

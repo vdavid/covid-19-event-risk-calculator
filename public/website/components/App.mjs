@@ -1,4 +1,5 @@
-import React, {useState} from '../../web_modules/react.js';
+import {useState} from '../../web_modules/react.js';
+import Header from './Header.mjs';
 import Result from './Result.mjs';
 import Table from './Table.mjs';
 import DecisionPoints from './DecisionPoints.mjs';
@@ -25,10 +26,7 @@ export default function App() {
         speech: undefined,
     });
     return [
-        React.createElement('header', {}, [
-            React.createElement('h1', {}, 'Covid-19 event risk assessment tool'),
-            React.createElement('p', {}, 'Give some specifics about the planned event, see the risk you’re taking if you go.'),
-        ]),
+        Header(),
         DecisionPoints(filterSet, setFilterSet),
         Result(filterSet),
         Table(filterSet),

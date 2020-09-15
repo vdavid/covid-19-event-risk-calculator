@@ -1,5 +1,4 @@
-import React from './web_modules/react.js';
-import {render} from './web_modules/react-dom.js';
-import App from './website/components/App.mjs';
+import {getDefaultLocaleCodeByNavigatorPreferences} from './i18n/i18nHelper.mjs';
 
-render(React.createElement(App, null), document.getElementById('app'));
+const preferredLocale = getDefaultLocaleCodeByNavigatorPreferences();
+window.location.href = (preferredLocale === 'hu-HU') ? '/hu/' : '/en/';

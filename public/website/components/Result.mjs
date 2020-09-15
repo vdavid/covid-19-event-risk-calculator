@@ -1,31 +1,34 @@
 import React from '../../web_modules/react.js';
+import { useI18n } from '../../i18n/components/I18nProvider.mjs';
 
 /**
  * @param {FilterSet} filterSet
  */
 export default function Result(filterSet) {
+    const {__} = useI18n();
+
     const possibleColorLetters = _getAllPossibleSpecificFilterSet(filterSet).map(_getColorLetterForSpecificFilterSet);
     const uniqueLetters = possibleColorLetters.filter((value, index, self) => self.indexOf(value) === index);
     return React.createElement('div', {className: 'result'}, [
-        React.createElement('div', {className: 'question'}, 'Are you in danger?'),
+        React.createElement('div', {className: 'question'}, __('Are you in danger?')),
         React.createElement('div', {className: 'answer ' + _getResultClass(uniqueLetters)}, _getResultText(uniqueLetters)),
     ]);
-}
 
-function _getResultClass(uniqueLetters) {
-    return (uniqueLetters.length > 1) ? 'unsure' : (uniqueLetters[0] === 'g' ? 'low' : (uniqueLetters[0] === 'y' ? 'medium' : 'high'));
-}
+    function _getResultClass(uniqueLetters) {
+        return (uniqueLetters.length > 1) ? 'unsure' : (uniqueLetters[0] === 'g' ? 'low' : (uniqueLetters[0] === 'y' ? 'medium' : 'high'));
+    }
 
-function _getResultText(uniqueLetters) {
-    if (uniqueLetters.length > 1) {
-        return 'Not sure yet. Give a few more answers.';
-    } else {
-        if (uniqueLetters[0] === 'g') {
-            return 'You are at manageable risk. Take care though.';
-        } else if (uniqueLetters[0] === 'y') {
-            return 'You are at medium risk. Keep your distance at all times from people outside your household.';
+    function _getResultText(uniqueLetters) {
+        if (uniqueLetters.length > 1) {
+            return __('Not sure yet. Give a few more answers.');
         } else {
-            return 'You are at high risk. Avoid/get out of this situation to take care of yourself and others.';
+            if (uniqueLetters[0] === 'g') {
+                return __('You are at manageable risk. Take care though.');
+            } else if (uniqueLetters[0] === 'y') {
+                return __('You are at medium risk. Keep your distance at all times from people outside your household.');
+            } else {
+                return __('You are at high risk. Avoid/get out of this situation to take care of yourself and others.');
+            }
         }
     }
 }

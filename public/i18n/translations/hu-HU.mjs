@@ -2,7 +2,7 @@
 export const translations = {
     /* Header */
     'Covid-19 event risk assessment tool': {translation: 'Koronavírus kockázatelemző'},
-    'Give some specifics about the planned event, see the risk you’re taking if you go.': {translation: ''},
+    'Click on some answers to give details on the planned event. See the risk you’re taking if you go.': {translation: 'Kattints a válaszokra, hogy megadj néhány részletet a tervezett eseményről. Eredményként meglátod, mekkora kockázatot vállalsz, ha elmész.'},
 
     /* Decision points */
     'Is the place crowded?': {translation: 'Zsúfolt a hely?'},

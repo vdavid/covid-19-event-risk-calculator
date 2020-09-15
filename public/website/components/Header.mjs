@@ -30,7 +30,7 @@ export default function Header() {
 
         React.createElement('header', {}, [
             React.createElement('h1', {}, __('Covid-19 event risk assessment tool')),
-            React.createElement('p', {}, __('Give some specifics about the planned event, see the risk you’re taking if you go.')),
+            React.createElement('p', {}, __('Click on some answers to give details on the planned event. See the risk you’re taking if you go.')),
         ]),
     ]);
 }

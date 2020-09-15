@@ -46,7 +46,7 @@ export const translations = {
     'Silent': {translation: 'Csendben'},
     'Speaking': {translation: 'Beszélgetés'},
     'Shouting, singing': {translation: 'Kiabálás, éneklés'},
-    '* Borderline case that is highly dependent on quantitative definitions of distancing, number of individuals, and time of exposure': {translation: '* Necces eset, ami nagyon függ attól, mit értünk távolságtartás, a személyek száma, és "hosszú idő" alatt.'},
+    '* Borderline case that is highly dependent on quantitative definitions of distancing, number of individuals, and time of exposure': {translation: '* Necces eset, ami nagyon függ attól, mit értünk távolságtartás, a személyek száma, és “hosszú idő” alatt.'},
 
     /* Footer */
     'Copyright': {translation: ''},

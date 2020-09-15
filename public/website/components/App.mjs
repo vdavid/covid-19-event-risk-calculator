@@ -26,7 +26,7 @@ export default function App() {
     });
     return [
         React.createElement('header', {}, [
-            React.createElement('h1', {}, 'Covid-19 event risk calculator'),
+            React.createElement('h1', {}, 'Covid-19 event risk assessment tool'),
             React.createElement('p', {}, 'Give some specifics about the planned event, see the risk you’re taking if you go.'),
         ]),
         DecisionPoints(filterSet, setFilterSet),

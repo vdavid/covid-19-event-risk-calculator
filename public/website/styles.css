@@ -1,42 +1,48 @@
 :root {
+    --option-unselected-color: #f1f6ff;
     --option-selected-color: #2196f3;
     --table-header-color: #2196f3;
     --table-green-color: #4caf50;
     --table-yellow-color: #ffeb3b;
     --table-red-color: #f44336;
 }
-body { margin:0 auto; padding:0 1rem 1rem; max-width: 1024px; font-family: sans-serif; }
-h1 { padding: 1rem; }
-@media (min-width:1024px) {
+body { margin: 0 auto; padding: 0 1rem 1rem; max-width: 1024px; font-family: sans-serif; }
+@media (min-width: 1024px) {
     #app {display: grid; grid-template-areas:   "header header"
                         "decisionPoints table"
                         "result result"
                         "footer footer";
         grid-template-columns:    20rem auto;
     }
-    h1 { grid-area: header; }
+    header { grid-area: header; }
     .decisionPoints { grid-area: decisionPoints; }
-    table { grid-area: table; }
+    .table { grid-area: table; }
     .result { grid-area: result; }
     footer { grid-area: footer; }
 }
 
 
-.decisionPoints { padding: 1rem 0; }
-.decisionPoint { padding-bottom: 1rem; }
-.question { padding-bottom: 0.5rem; }
+.decisionPoints { padding: 1rem 0; display: flex; flex-wrap: wrap;}
+.decisionPoint { padding-bottom: 1rem; width:100%; }
+@media (min-width: 672px) {
+    .decisionPoint { min-width: 20rem; width:50%; }
+}
+.question { padding-bottom: 0.5rem; font-weight:bold; }
 .option:before { content: '→ '; }
-.option { padding: 0.2rem; }
+.option { margin: 0 1em; padding: 0.2rem; background-color: var(--option-unselected-color); cursor: pointer; }
 .option.on {background-color: var(--option-selected-color); }
 
 .result { padding: 1rem 0; }
-.result .question { padding:1rem 0; }
-.result .answer { background-color: var(--table-header-color); padding:1rem; }
+.result .question { padding: 1rem 0; }
+.result .answer { background-color: var(--table-header-color); padding: 1rem; }
 .result .answer.low { background-color: var(--table-green-color); }
 .result .answer.medium { background-color: var(--table-yellow-color); }
 .result .answer.high { background-color: var(--table-red-color); }
 
-table { padding: 1rem 0; table-layout: fixed;}
+table { font-size:0.7rem; padding: 1rem 0; table-layout: fixed;}
+@media (min-width: 600px) {
+    table { font-size:1rem; }
+}
 th { font-weight: normal; padding: 0.2rem; }
 td { padding: 0.2rem; }
 tr { height: 2rem; }
@@ -56,5 +62,5 @@ table tr.heading th { text-align: left; }
 table th.rowHeader { text-align: left; }
 table td.off { filter: opacity(30%); }
 
-footer { padding:1rem 0; font-size: smaller; }
-.donateButtonContainer { padding:0.5rem 0; }
+footer { padding: 1rem 0; font-size: smaller; }
+.donateButtonContainer { padding: 0.5rem 0; }

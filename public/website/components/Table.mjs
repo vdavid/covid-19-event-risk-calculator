@@ -4,60 +4,60 @@ import React from '../../web_modules/react.js';
  * @param {FilterSet} filterSet
  */
 export default function Table(filterSet) {
-    return [
+    return React.createElement('div', {className: 'table'}, [
         React.createElement('table', {}, [
-        React.createElement('colgroup', {}, [
-            React.createElement('col', {}),
-            React.createElement('col', {}),
-            React.createElement('col', {}),
-            React.createElement('col', {}),
-            React.createElement('col', {}),
-            React.createElement('col', {}),
-            React.createElement('col', {}),
-            React.createElement('col', {}),
+            React.createElement('colgroup', {}, [
+                React.createElement('col', {}),
+                React.createElement('col', {}),
+                React.createElement('col', {}),
+                React.createElement('col', {}),
+                React.createElement('col', {}),
+                React.createElement('col', {}),
+                React.createElement('col', {}),
+                React.createElement('col', {}),
+            ]),
+            React.createElement('tr', {}, [
+                React.createElement('th', {rowspan: 2}, 'Type and level of group activity'),
+                React.createElement('th', {colspan: 3}, 'Low occupancy'),
+                React.createElement('th', {}, ''),
+                React.createElement('th', {colspan: 3}, 'High occupancy'),
+            ]),
+            React.createElement('tr', {}, [
+                React.createElement('th', {}, 'Outdoors and well ventilated'),
+                React.createElement('th', {}, 'Indoors and well ventilated'),
+                React.createElement('th', {}, 'Poorly ventilated'),
+                React.createElement('th', {}, ''),
+                React.createElement('th', {}, 'Outdoors and well ventilated'),
+                React.createElement('th', {}, 'Indoors and well ventilated'),
+                React.createElement('th', {}, 'Poorly ventilated'),
+            ]),
+            React.createElement('tr', {className: 'heading'}, [
+                React.createElement('th', {colspan: 8}, 'Wearing face coverings, contact for short time'),
+            ]),
+            _buildTableRow({title: 'Silent', colors: 'gggggy', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: false, prolongedTime: false, speech: 0})}),
+            _buildTableRow({title: 'Speaking', colors: 'gggggy', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: false, prolongedTime: false, speech: 1})}),
+            _buildTableRow({title: 'Shouting, singing', colors: 'ggyyyr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: false, prolongedTime: false, speech: 2})}),
+            React.createElement('tr', {className: 'heading'}, [
+                React.createElement('th', {colspan: 8}, 'Wearing face coverings, contact for prolonged time'),
+            ]),
+            _buildTableRow({title: 'Silent', colors: 'ggygyr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: false, prolongedTime: true, speech: 0})}),
+            _buildTableRow({title: 'Speaking', colors: 'ggyyyr', asterisks: ' * *  ', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: false, prolongedTime: true, speech: 1})}),
+            _buildTableRow({title: 'Shouting, singing', colors: 'gyryrr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: false, prolongedTime: true, speech: 2})}),
+            React.createElement('tr', {className: 'heading'}, [
+                React.createElement('th', {colspan: 8}, 'No face coverings, contact for short time'),
+            ]),
+            _buildTableRow({title: 'Silent', colors: 'ggyyyr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: true, prolongedTime: false, speech: 0})}),
+            _buildTableRow({title: 'Speaking', colors: 'gyyyrr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: true, prolongedTime: false, speech: 1})}),
+            _buildTableRow({title: 'Shouting, singing', colors: 'yyrrrr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: true, prolongedTime: false, speech: 2})}),
+            React.createElement('tr', {className: 'heading'}, [
+                React.createElement('th', {colspan: 8}, 'No face coverings, contact for prolonged time'),
+            ]),
+            _buildTableRow({title: 'Silent', colors: 'gyryrr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: true, prolongedTime: true, speech: 0})}),
+            _buildTableRow({title: 'Speaking', colors: 'yyrrrr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: true, prolongedTime: true, speech: 1})}),
+            _buildTableRow({title: 'Shouting, singing', colors: 'yrrrrr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: true, prolongedTime: true, speech: 2})}),
         ]),
-        React.createElement('tr', {}, [
-            React.createElement('th', {rowspan: 2}, 'Type and level of group activity'),
-            React.createElement('th', {colspan: 3}, 'Low occupancy'),
-            React.createElement('th', {}, ''),
-            React.createElement('th', {colspan: 3}, 'High occupancy'),
-        ]),
-        React.createElement('tr', {}, [
-            React.createElement('th', {}, 'Outdoors and well ventilated'),
-            React.createElement('th', {}, 'Indoors and well ventilated'),
-            React.createElement('th', {}, 'Poorly ventilated'),
-            React.createElement('th', {}, ''),
-            React.createElement('th', {}, 'Outdoors and well ventilated'),
-            React.createElement('th', {}, 'Indoors and well ventilated'),
-            React.createElement('th', {}, 'Poorly ventilated'),
-        ]),
-        React.createElement('tr', {className: 'heading'}, [
-            React.createElement('th', {colspan: 8}, 'Wearing face coverings, contact for short time'),
-        ]),
-        _buildTableRow({title: 'Silent', colors: 'gggggy', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: false, prolongedTime: false, speech: 0})}),
-        _buildTableRow({title: 'Speaking', colors: 'gggggy', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: false, prolongedTime: false, speech: 1})}),
-        _buildTableRow({title: 'Shouting, singing', colors: 'ggyyyr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: false, prolongedTime: false, speech: 2})}),
-        React.createElement('tr', {className: 'heading'}, [
-            React.createElement('th', {colspan: 8}, 'Wearing face coverings, contact for prolonged time'),
-        ]),
-        _buildTableRow({title: 'Silent', colors: 'ggygyr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: false, prolongedTime: true, speech: 0})}),
-        _buildTableRow({title: 'Speaking', colors: 'ggyyyr', asterisks: ' * *  ', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: false, prolongedTime: true, speech: 1})}),
-        _buildTableRow({title: 'Shouting, singing', colors: 'gyryrr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: false, prolongedTime: true, speech: 2})}),
-        React.createElement('tr', {className: 'heading'}, [
-            React.createElement('th', {colspan: 8}, 'No face coverings, contact for short time'),
-        ]),
-        _buildTableRow({title: 'Silent', colors: 'ggyyyr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: true, prolongedTime: false, speech: 0})}),
-        _buildTableRow({title: 'Speaking', colors: 'gyyyrr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: true, prolongedTime: false, speech: 1})}),
-        _buildTableRow({title: 'Shouting, singing', colors: 'yyrrrr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: true, prolongedTime: false, speech: 2})}),
-        React.createElement('tr', {className: 'heading'}, [
-            React.createElement('th', {colspan: 8}, 'No face coverings, contact for prolonged time'),
-        ]),
-        _buildTableRow({title: 'Silent', colors: 'gyryrr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: true, prolongedTime: true, speech: 0})}),
-        _buildTableRow({title: 'Speaking', colors: 'yyrrrr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: true, prolongedTime: true, speech: 1})}),
-        _buildTableRow({title: 'Shouting, singing', colors: 'yrrrrr', areEnabled: _calculateEnabledForRow(filterSet, {bareFaces: true, prolongedTime: true, speech: 2})}),
-    ]),
         React.createElement('div', {className: 'asterisk'}, '* Borderline case that is highly dependent on quantitative definitions of distancing, number of individuals, and time of exposure')
-        ];
+    ]);
 }
 
 /**

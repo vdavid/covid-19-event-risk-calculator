@@ -8,8 +8,24 @@
     --table-red-color: #f44336;
 }
 
+/* Fonts */
+@font-face {
+    font-family: "Jost";
+    src: url("/website/fonts/Jost-400-Book.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Jost";
+    src: url("/website/fonts/Jost-700-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* App */
-body { font-family: sans-serif; line-height: 1.5rem; }
+body { font-family: Jost, Helvetica, Arial, sans-serif; line-height: 1.5rem; }
 #app { position: relative; margin: 0 auto; padding: 1rem; max-width: 1024px; }
 @media (min-width: 1024px) {
     #app {display: grid; grid-template-areas:
@@ -33,14 +49,14 @@ body { font-family: sans-serif; line-height: 1.5rem; }
 h1 {margin-top: 1rem; }
 
 /* Decision points */
-.decisionPoints { display: flex; flex-wrap: wrap; }
+.decisionPoints { display: flex; flex-wrap: wrap; gap:1rem; }
 .decisionPoint { padding-bottom: 1rem; width: 100%; border-radius: 2px; }
 @media (min-width: 672px) {
-    .decisionPoint { min-width: 20rem; width: 50%; }
+    .decisionPoint { min-width: 20rem; flex:1 1; }
 }
 .question { padding-bottom: 0.5rem; font-weight: bold; }
 .option:before { content: '→ '; }
-.option { margin: 0 1em; padding: 0.2rem; background-color: var(--option-unselected-color); cursor: pointer; transition: background 0.3s; }
+.option { margin: 0; padding: 0.2rem; background-color: var(--option-unselected-color); cursor: pointer; transition: background 0.3s; }
 .option.on {background-color: var(--option-selected-color); }
 .option:nth-child(2) { border-radius: 2px 2px 0 0; }
 .option:last-child { border-radius: 0 0 2px 2px; }

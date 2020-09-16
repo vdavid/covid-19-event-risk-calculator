@@ -50,7 +50,7 @@ export const translations = {
 
     /* Footer */
     'Copyright': {translation: ''},
-    'David Veszelovszki': {translation: 'Veszelovszki Dávid'},
+    'David Veszelovszki': {translation: 'David Veszelovszki'},
     'inspired by': {translation: 'basato sull\''},
     'bmj’s article': {translation: 'articolo di bmj'},
     '. If you like it, ': {translation: '. Se ti piace puoi sostenerci qui: '},

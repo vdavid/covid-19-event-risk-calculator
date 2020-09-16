@@ -55,4 +55,6 @@ export const translations = {
     'bmj’s article': {translation: 'bmj cikke'},
     '. If you like it, ': {translation: ' alapján. Ha tetszik, itt adakozhatsz: '},
     'This is an open-source project': {translation: 'Ez egy nyílt forráskódú projekt'},
+    'There is no consensus on what “crowded” means. As a rule of thumb, use 1–1.5m distance from others.': {translation: 'Nincs hivatalos álláspont arról, mi a “zsúfolt”. Ökölszabályként használhatod az egy-másfél méter távolságot.'},
+    'There is no consensus on what “short time” means. As a rule of thumb, use 15 minutes.': {translation: 'Nincs hivatalos álláspont arról, mi a “rövid idő”. Ökölszabályként használhatod a 15 percet.'},
 };

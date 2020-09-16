@@ -22,14 +22,14 @@ export default function Table(filterSet) {
             React.createElement('tr', {}, [
                 React.createElement('th', {rowspan: 2}, __('Type and level of group activity')),
                 React.createElement('th', {colspan: 3}, __('Low occupancy')),
-                React.createElement('th', {}, __('')),
+                React.createElement('th', {}, ''),
                 React.createElement('th', {colspan: 3}, __('High occupancy')),
             ]),
             React.createElement('tr', {}, [
                 React.createElement('th', {}, __('Outdoors and well ventilated')),
                 React.createElement('th', {}, __('Indoors and well ventilated')),
                 React.createElement('th', {}, __('Poorly ventilated')),
-                React.createElement('th', {}, __('')),
+                React.createElement('th', {}, ''),
                 React.createElement('th', {}, __('Outdoors and well ventilated')),
                 React.createElement('th', {}, __('Indoors and well ventilated')),
                 React.createElement('th', {}, __('Poorly ventilated')),

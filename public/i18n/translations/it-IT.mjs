@@ -55,4 +55,6 @@ export const translations = {
     'bmj’s article': {translation: 'articolo di bmj'},
     '. If you like it, ': {translation: '. Se ti piace puoi sostenerci qui: '},
     'This is an open-source project': {translation: 'Questo progetto è open source.'},
+    'There is no consensus on what “crowded” means. As a rule of thumb, use 1–1.5m distance from others.': {translation: 'There is no consensus on what “crowded” means. As a rule of thumb, use 1–1.5m distance from others.'},
+    'There is no consensus on what “short time” means. As a rule of thumb, use 15 minutes.': {translation: 'There is no consensus on what “short time” means. As a rule of thumb, use 15 minutes.'},
 };
